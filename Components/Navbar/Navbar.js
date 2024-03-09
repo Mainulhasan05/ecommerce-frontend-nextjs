@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import MyComponent from './ScriptLoader'
+import { useSelector } from 'react-redux'
 
 const Navbar = () => {
+    const {homedata} = useSelector(state => state.home)
+    
   return (
     <>
     <MyComponent/>
