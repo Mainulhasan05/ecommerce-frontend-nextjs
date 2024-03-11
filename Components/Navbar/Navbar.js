@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className="humberger__menu__overlay"></div>
     <div className="humberger__menu__wrapper">
         <div className="humberger__menu__logo">
-            <a href="#"><img src="img/logo.png" alt=""/></a>
+            <a href="#"><img src="/img/logo.png" alt=""/></a>
         </div>
         <div className="humberger__menu__cart">
             <ul>
@@ -22,7 +22,7 @@ const Navbar = () => {
         </div>
         <div className="humberger__menu__widget">
             <div className="header__top__right__language">
-                <img src="img/language.png" alt=""/>
+                <img src="/img/language.png" alt=""/>
                 <div>English</div>
                 <span className="arrow_carrot-down"></span>
                 <ul>
@@ -88,7 +88,7 @@ const Navbar = () => {
                                 <a href="#"><i className="fa fa-pinterest-p"></i></a>
                             </div>
                             <div className="header__top__right__language">
-                                <img src="img/language.png" alt=""/>
+                                <img src="/img/language.png" alt=""/>
                                 <div>English</div>
                                 <span className="arrow_carrot-down"></span>
                                 <ul>
@@ -108,7 +108,7 @@ const Navbar = () => {
             <div className="row">
                 <div className="col-lg-3">
                     <div className="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""/></a>
+                        <a href="./index.html"><img src="/img/logo.png" alt=""/></a>
                     </div>
                 </div>
                 <div className="col-lg-6">
@@ -192,7 +192,7 @@ const Navbar = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="hero__item set-bg" data-setbg="img/hero/banner.jpg">
+                    <div className="hero__item set-bg" data-setbg="/img/hero/banner.jpg">
                         <div className="hero__text">
                             <span>FRUIT FRESH</span>
                             <h2>Vegetable <br />100% Organic</h2>
