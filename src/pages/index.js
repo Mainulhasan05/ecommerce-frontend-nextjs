@@ -5,6 +5,7 @@ import axiosInstance from '../../utils/axiosInstance'
 import { useDispatch } from 'react-redux'
 import Head from 'next/head'
 import { setHomeData } from '../../features/homeData/homeSlice'
+import NewArrivals from '../../Components/Homepage/NewArrivals'
 
 
 export const getServerSideProps = async () => {
@@ -53,6 +54,7 @@ const index = ({data}) => {
       </Head>
       <CategorySlide/>
       <FeaturedProductsSlide/>
+      <NewArrivals/>
     </div>
   )
 }

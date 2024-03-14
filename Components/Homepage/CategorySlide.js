@@ -11,7 +11,9 @@ const CategorySlide = () => {
                     {
                         homedata?.categories?.map((category,index)=>(
                             <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg={process.env.API_URL+category?.image}>
+                        <div style={{
+                            backgroundImage: `url(${process.env.API_URL+category?.image})`
+                        }} class="categories__item set-bg" data-setbg={process.env.API_URL+category?.image}>
                             <h5><a href="#">{category?.name}</a></h5>
                         </div>
                     </div>
