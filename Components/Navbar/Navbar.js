@@ -59,8 +59,8 @@ const Navbar = () => {
         </div>
         <div className="humberger__menu__contact">
             <ul>
-                <li><i className="fa fa-envelope"></i> hello@colorlib.com</li>
-                <li>Free Shipping for all Order of $99</li>
+                <li><i className="fa fa-envelope"></i> mdrifatbd5@gmail.com</li>
+                <li>Free Shipping for all Order of ৳99</li>
             </ul>
         </div>
     </div>
@@ -187,7 +187,7 @@ const Navbar = () => {
                                 <i className="fa fa-phone"></i>
                             </div>
                             <div className="hero__search__phone__text">
-                                <h5>+65 11.188.888</h5>
+                                <h5>+8801757995016</h5>
                                 <span>support 24/7 time</span>
                             </div>
                         </div>
