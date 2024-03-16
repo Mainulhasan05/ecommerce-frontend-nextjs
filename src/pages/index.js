@@ -7,6 +7,7 @@ import Head from 'next/head'
 import { setHomeData } from '../../features/homeData/homeSlice'
 import NewArrivals from '../../Components/Homepage/NewArrivals'
 import HeroSection from '../../Components/Homepage/HeroSection'
+import FeaturedShops from '../../Components/Homepage/FeaturedShops'
 
 
 export const getServerSideProps = async () => {
@@ -56,6 +57,7 @@ const index = ({data}) => {
       <HeroSection/>
       <CategorySlide/>
       <FeaturedProductsSlide/>
+      <FeaturedShops/>
       <NewArrivals/>
     </div>
   )

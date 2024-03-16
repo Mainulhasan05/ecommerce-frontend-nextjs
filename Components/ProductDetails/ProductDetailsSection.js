@@ -37,7 +37,13 @@ const ProductDetailsSection = ({data}) => {
                             <i className="fa fa-star"></i>
                             <i className="fa fa-star"></i>
                             <i className="fa fa-star-half-o"></i>
-                            <span>(18 reviews)</span>
+                            {/* <span>({data?.views} views)</span> */}
+                        </div>
+                        <div>
+                            <h6 className='text-secondary my-3'>
+                                This product has {data?.views} views
+                            </h6>
+                            
                         </div>
                         <div className="product__details__price">৳{data?.new_price}</div>
                         
@@ -51,7 +57,11 @@ const ProductDetailsSection = ({data}) => {
                         <a href="#" className="primary-btn">ADD TO CART</a>
                         <a href="#" className="heart-icon"><span className="icon_heart_alt"></span></a>
                         <ul>
-                            <li><b>Availability</b> <span>In Stock</span></li>
+                            <li><b>Availability</b> <span>
+                                {
+                                    data?.quantity > 0 ? 'In Stock' : 'Out of Stock'
+                                }
+                                </span></li>
                             <li><b>Shipping</b> <span>01 day shipping. <samp>Free pickup today</samp></span></li>
                             <li><b>Weight</b> <span>0.5 kg</span></li>
                             <li><b>Share on</b>

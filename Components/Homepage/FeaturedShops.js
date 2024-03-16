@@ -1,8 +1,11 @@
 import Link from 'next/link'
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
-const FeaturedProductsSlide = () => {
+
+const FeaturedShops = () => {
     const {homedata}=useSelector(state=>state.home)
   return (
     <section class="featured spad">
@@ -10,15 +13,27 @@ const FeaturedProductsSlide = () => {
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>New Arrivals</h2>
+                        <h2>Featured Shops</h2>
                     </div>
                     
                 </div>
             </div>
             <div class="products_container row featured__filter">
+                <Swiper
+                spaceBetween={10}
+                slidesPerView={4}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false
+                  }}
+                loop={true}
+                
+
+                >
+
                 {
                     homedata?.newArrivals?.map((product,index)=>(
-                        <div class="col-lg-3 col-md-4 col-sm-6  p-3">
+                        <SwiperSlide  class="col-lg-3 col-md-4 col-sm-6  p-3">
                     <div class="featured__item">
                         <div className="text-center">
                             <Link href={`/product/${product?.slug}`}>
@@ -31,15 +46,16 @@ const FeaturedProductsSlide = () => {
                             <h5>৳{product?.new_price}</h5>
                         </div>
                     </div>
-                </div>
+                </SwiperSlide >
                     ))
                 }
                 
                 
+            </Swiper>
             </div>
         </div>
     </section>
   )
 }
 
-export default FeaturedProductsSlide
+export default FeaturedShops

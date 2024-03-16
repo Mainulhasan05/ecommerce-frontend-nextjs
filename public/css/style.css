@@ -3163,6 +3163,10 @@ ol {
 /* Wide Mobile = 480px */
 
 @media only screen and (max-width: 767px) {
+	.products_container{
+		display: grid;
+		grid-template-columns: repeat(2,1fr);		
+	}
 	.hero__categories {
 		margin-bottom: 30px;
 	}
@@ -3464,5 +3468,9 @@ ol {
 	}
 	.blog__details__hero__text h2 {
 		font-size: 24px;
+	}
+	.products_container{
+		display: grid;
+		grid-template-columns: repeat(2,1fr);		
 	}
 }
