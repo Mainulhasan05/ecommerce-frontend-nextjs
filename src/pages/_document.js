@@ -5,10 +5,9 @@ export default function Document() {
     <Html lang="en">
               <Head>
           <meta charSet="UTF-8" />
-          <meta name="description" content="Ogani Template" />
-          <meta name="keywords" content="Ogani, unica, creative, html" />
+          
+          
           <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-          <title>Ogani | Template</title>
 
           <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet" />
 

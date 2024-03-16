@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux'
 import Head from 'next/head'
 import { setHomeData } from '../../features/homeData/homeSlice'
 import NewArrivals from '../../Components/Homepage/NewArrivals'
+import HeroSection from '../../Components/Homepage/HeroSection'
 
 
 export const getServerSideProps = async () => {
@@ -52,6 +53,7 @@ const index = ({data}) => {
                 <meta name="twitter:description" content="Welcome to SuchonaMart - your one-stop destination for online shopping in Chapai Nawabganj. Discover a wide range of products and enjoy convenient delivery options." />
                 <meta name="twitter:image" content="https://api.rifatewu2.xyz/uploads/categories/1710008846788-Suchona%20mart.png" />
       </Head>
+      <HeroSection/>
       <CategorySlide/>
       <FeaturedProductsSlide/>
       <NewArrivals/>

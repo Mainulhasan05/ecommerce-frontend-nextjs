@@ -3,12 +3,12 @@ import ProductHeroSection from './ProductHeroSection'
 import ProductBreadcumbSection from './ProductBreadcumbSection'
 import ProductDetailsSection from './ProductDetailsSection'
 
-const ProductDetails = () => {
+const ProductDetails = ({data}) => {
   return (
     <div>
-        <ProductHeroSection/>
-        <ProductBreadcumbSection/>
-        <ProductDetailsSection/>
+        <ProductHeroSection data={data}/>
+        <ProductBreadcumbSection data={data}/>
+        <ProductDetailsSection data={data}/>
 
     </div>
   )

@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ProductHeroSection = ({data}) => {
+const HeroSection = () => {
   return (
-    <section className="hero hero-normal">
+    <section className="hero">
         <div className="container">
             <div className="row">
                 <div className="col-lg-3">
@@ -11,7 +11,7 @@ const ProductHeroSection = ({data}) => {
                             <i className="fa fa-bars"></i>
                             <span>All departments</span>
                         </div>
-                        <ul>
+                        <ul id='category_list'>
                             <li><a href="#">Fresh Meat</a></li>
                             <li><a href="#">Vegetables</a></li>
                             <li><a href="#">Fruit & Nut Gifts</a></li>
@@ -43,9 +43,17 @@ const ProductHeroSection = ({data}) => {
                                 <i className="fa fa-phone"></i>
                             </div>
                             <div className="hero__search__phone__text">
-                                <h5>+65 11.188.888</h5>
+                                <h5>+8801757995016</h5>
                                 <span>support 24/7 time</span>
                             </div>
+                        </div>
+                    </div>
+                    <div className="hero__item set-bg" data-setbg="/img/hero/banner.jpg">
+                        <div className="hero__text">
+                            <span>FRUIT FRESH</span>
+                            <h2>Vegetable <br />100% Organic</h2>
+                            <p>Free Pickup and Delivery Available</p>
+                            <a href="#" className="primary-btn">SHOP NOW</a>
                         </div>
                     </div>
                 </div>
@@ -55,4 +63,4 @@ const ProductHeroSection = ({data}) => {
   )
 }
 
-export default ProductHeroSection
+export default HeroSection
