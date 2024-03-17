@@ -27,8 +27,6 @@ const FeaturedShops = () => {
                     disableOnInteraction: false
                   }}
                 loop={true}
-                
-
                 >
 
                 {

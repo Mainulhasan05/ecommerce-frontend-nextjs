@@ -5,14 +5,7 @@ const MyComponent = () => {
     const loadScripts = async () => {
       // Load JavaScript files
       const scripts = [
-        'js/jquery-3.3.1.min.js',
-        'js/bootstrap.min.js',
-        'js/jquery.nice-select.min.js',
-        'js/jquery-ui.min.js',
-        'js/jquery.slicknav.js',
-        'js/mixitup.min.js',
-        'js/owl.carousel.min.js',
-        'js/main.js'
+       
       ];
 
       for (const script of scripts) {

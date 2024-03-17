@@ -57,7 +57,7 @@ const index = ({data}) => {
       <HeroSection/>
       <CategorySlide/>
       <FeaturedProductsSlide/>
-      <FeaturedShops/>
+      {/* <FeaturedShops/> */}
       <NewArrivals/>
     </div>
   )
