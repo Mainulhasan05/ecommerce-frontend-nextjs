@@ -1,11 +1,18 @@
 import Link from 'next/link'
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import Slider from "react-slick";
+
 
 
 const FeaturedShops = () => {
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      };
     const {homedata}=useSelector(state=>state.home)
   return (
     <section class="featured spad">
@@ -19,14 +26,7 @@ const FeaturedShops = () => {
                 </div>
             </div>
             <div class="products_container row featured__filter">
-                <Swiper
-                spaceBetween={10}
-                slidesPerView={4}
-                autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false
-                  }}
-                loop={true}
+                <Slider {...settings}
                 >
 
                 {
@@ -49,7 +49,7 @@ const FeaturedShops = () => {
                 }
                 
                 
-            </Swiper>
+            </Slider>
             </div>
         </div>
     </section>
