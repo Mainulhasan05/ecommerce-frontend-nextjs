@@ -8,6 +8,8 @@ import { setHomeData } from '../../features/homeData/homeSlice'
 import NewArrivals from '../../Components/Homepage/NewArrivals'
 import HeroSection from '../../Components/Homepage/HeroSection'
 import FeaturedShops from '../../Components/Homepage/FeaturedShops'
+import FeaturedCategories from '../../Components/Homepage/FeaturedCategories'
+import BestSellingProducts from '../../Components/Homepage/BestSellingProducts'
 
 
 export const getServerSideProps = async () => {
@@ -55,10 +57,12 @@ const index = ({data}) => {
                 <meta name="twitter:image" content="https://api.rifatewu2.xyz/uploads/categories/1710008846788-Suchona%20mart.png" />
       </Head>
       <HeroSection/>
+      <FeaturedCategories/>
       <CategorySlide/>
       <TrendingProducts/>
       <FeaturedShops/>
       <NewArrivals/>
+      <BestSellingProducts/>
     </div>
   )
 }

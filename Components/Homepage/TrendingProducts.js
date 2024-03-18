@@ -1,8 +1,45 @@
 import Link from 'next/link'
 import React from 'react'
 import { useSelector } from 'react-redux'
+import Slider from 'react-slick';
 
 const FeaturedProductsSlide = () => {
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 5,
+        slidesToScroll: 2,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        cssEase: "linear",
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      };
     const {homedata}=useSelector(state=>state.home)
   return (
     <section class="featured spad">
@@ -15,14 +52,15 @@ const FeaturedProductsSlide = () => {
                     
                 </div>
             </div>
-            <div class="products_container row featured__filter">
+            {/* <div class="products_container row featured__filter"> */}
+            <Slider {...settings} class="products_container row featured__filter">
                 {
                     homedata?.trendingProducts?.map((product,index)=>(
-                        <div class="col-lg-3 col-md-4 col-sm-6  p-3">
+                        
                     <div class="featured__item">
                         <div className="text-center">
                             <Link href={`/product/${product?.slug}`}>
-                            <img className='img-fluid' src={process.env.API_URL+product?.image} alt=""  style={{width:"200px",height:"200px"}}/>
+                            <img width={100} height={80} className='img-fluid' src={process.env.API_URL+product?.image} alt=""  style={{width:"200px",height:"200px"}}/>
                             </Link>
                         </div>
                         
@@ -31,12 +69,23 @@ const FeaturedProductsSlide = () => {
                             <h5>৳{product?.new_price}</h5>
                         </div>
                     </div>
-                </div>
+                
                     ))
                 }
+                {
+        homedata.trendingProducts.length<6  && Array(6-homedata.featuredShops.length).fill(0).map((_,index)=>(
+          <div key={index} className="card">
+          <img width={100} height={80} className="card-img-top img-fluid" src="https://via.placeholder.com/150" alt="" />
+          <div className="card-body">
+            <h5 className="card-title">Shop Name</h5>
+            
+          </div>
+        </div>
+        ))
+      }
+                </Slider>
                 
-                
-            </div>
+            {/* </div> */}
         </div>
     </section>
   )

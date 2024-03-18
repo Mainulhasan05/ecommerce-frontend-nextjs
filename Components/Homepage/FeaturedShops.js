@@ -40,8 +40,6 @@ const FeaturedShops = () => {
         }
       }
     ]
-
-
   };
   const { homedata } = useSelector(state => state.home)
   return (

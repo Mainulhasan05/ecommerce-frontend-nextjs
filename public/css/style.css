@@ -47,6 +47,28 @@ h6 {
     overflow: hidden;
     transition: max-height 0.4s ease;
 }
+/* styles/sidebar.css */
+.category-card {
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	margin-bottom: 20px;
+  }
+  .category-item {
+	cursor: pointer;
+  }
+  .subcategory-card {
+	display: none;
+  }
+  .category-item:hover .subcategory-card {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	z-index: 1;
+  }
+    /* ends here  */
 
 p {
 	font-size: 16px;

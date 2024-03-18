@@ -5,7 +5,7 @@ import homeSlice from '../features/homeData/homeSlice';
 // import homeSlice from '../features/homedata/homeSlice';
 const store = configureStore({
   reducer: {
-    categorySlice: categorySlice,
+    category: categorySlice,
     home: homeSlice,
     
   },

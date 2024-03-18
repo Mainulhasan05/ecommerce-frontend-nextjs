@@ -1,42 +1,18 @@
-import React, { useEffect } from 'react';
+// components/Sidebar.js
 
-const CategorySidebar = () => {
-    useEffect(() => {
-        const toggleButton = document.querySelector('.hero__categories__all');
-        const categoryList = document.getElementById('category_list');
+import { useState } from 'react';
+import Link from 'next/link';
 
-        const handleClick = () => {
-            categoryList.classList.toggle('active');
-        };
+const Sidebar = () => {
+    const [isOpen, setIsOpen] = useState(true);
 
-        toggleButton.addEventListener('click', handleClick);
-
-        return () => {
-            toggleButton.removeEventListener('click', handleClick);
-        };
-    }, []); // Empty dependency array ensures this effect runs only once when component mounts
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
 
     return (
-        <div className="hero__categories">
-            <div className="hero__categories__all">
-                <i className="fa fa-bars"></i>
-                <span>All departments</span>
-            </div>
-            <ul id='category_list' className="hidden">
-                <li><a href="#">Fresh Meat</a></li>
-                <li><a href="#">Vegetables</a></li>
-                <li><a href="#">Fruit & Nut Gifts</a></li>
-                <li><a href="#">Fresh Berries</a></li>
-                <li><a href="#">Ocean Foods</a></li>
-                <li><a href="#">Butter & Eggs</a></li>
-                <li><a href="#">Fastfood</a></li>
-                <li><a href="#">Fresh Onion</a></li>
-                <li><a href="#">Papayaya & Crisps</a></li>
-                <li><a href="#">Oatmeal</a></li>
-                <li><a href="#">Fresh Bananas</a></li>
-            </ul>
-        </div>
+        <div class="hero__categories"><div class="hero__categories__all"><i class="fa fa-bars"></i><span>All departments</span></div><ul id="category_list" class="hidden active" style={{"maxHeight":"451px"}}><li><a href="#">Fresh Meat</a></li><li><a href="#">Vegetables</a></li><li><a href="#">Fruit &amp; Nut Gifts</a></li><li><a href="#">Fresh Berries</a></li><li><a href="#">Ocean Foods</a></li><li><a href="#">Butter &amp; Eggs</a></li><li><a href="#">Fastfood</a></li><li><a href="#">Fresh Onion</a></li><li><a href="#">Papayaya &amp; Crisps</a></li><li><a href="#">Oatmeal</a></li><li><a href="#">Fresh Bananas</a></li></ul></div>
     );
 };
 
-export default CategorySidebar;
+export default Sidebar;
