@@ -4,13 +4,27 @@ import axiosInstance from '../../../utils/axiosInstance'
 
 export const getServerSideProps = async (context) => {
   const {slug} = context.params
+  console.log("printing")
+  console.log(context.params)
+  console.log(slug)
   if(slug){
-    const response = await axiosInstance.get(`/api/product/${slug}`)
-    const data = response.data?.data
-    
-    return {
-      props: {
-        data
+    console.log(typeof slug)
+    if(typeof slug === 'string'){
+      try {
+        console.log("eta pailam",slug)
+        const response = await axiosInstance.get(`/api/product/${slug}`);
+        const data = response.data?.data;
+        return {
+          props: {
+            data
+          }
+        }
+      } catch (error) {
+        return {
+          props: {
+            error: error.message
+          }
+        }
       }
     }
   }
@@ -25,7 +39,7 @@ export const getServerSideProps = async (context) => {
 }
 
 const product = ({data}) => {
-  
+  console.log(data)
   return (
     <div>
       <ProductDetails data={data}/>

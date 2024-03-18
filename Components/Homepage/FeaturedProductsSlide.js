@@ -10,14 +10,14 @@ const FeaturedProductsSlide = () => {
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>New Arrivals</h2>
+                        <h2>Trending Products</h2>
                     </div>
                     
                 </div>
             </div>
             <div class="products_container row featured__filter">
                 {
-                    homedata?.newArrivals?.map((product,index)=>(
+                    homedata?.trendingProducts?.map((product,index)=>(
                         <div class="col-lg-3 col-md-4 col-sm-6  p-3">
                     <div class="featured__item">
                         <div className="text-center">

@@ -76,8 +76,8 @@ const Navbar = () => {
                     <div className="col-lg-6 col-md-6">
                         <div className="header__top__left">
                             <ul>
-                                <li><i className="fa fa-envelope"></i> hello@colorlib.com</li>
-                                <li>Free Shipping for all Order of $99</li>
+                                <li><i className="fa fa-envelope"></i> mdrifatbd5@gmail.com</li>
+                                <li>Free Shipping for all Order of ৳99</li>
                             </ul>
                         </div>
                     </div>
