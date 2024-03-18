@@ -10,8 +10,39 @@ const FeaturedShops = () => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
+        slidesToShow: 5,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        cssEase: "linear",
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+
+          
       };
     const {homedata}=useSelector(state=>state.home)
   return (
@@ -20,7 +51,7 @@ const FeaturedShops = () => {
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Featured Shops</h2>
+                        <h2>Featured Shops {homedata.featuredShops.length}</h2>
                     </div>
                     
                 </div>
@@ -30,21 +61,20 @@ const FeaturedShops = () => {
                 >
 
                 {
-                    homedata?.newArrivals?.map((product,index)=>(
-                        <SwiperSlide  class="col-lg-3 col-md-4 col-sm-6  p-3">
+                    homedata?.featuredShops?.map((shop,index)=>(          
                     <div class="featured__item">
                         <div className="text-center">
-                            <Link href={`/product/${product?.slug}`}>
-                            <img className='img-fluid' src={process.env.API_URL+product?.image} alt=""  style={{width:"200px",height:"200px"}}/>
+                            <Link href={`/shop/${shop?.slug}`}>
+                            <img className='img-fluid w-100' src={process.env.API_URL+shop?.image} alt=""  />
                             </Link>
                         </div>
                         
                         <div class="featured__item__text">
-                            <h6><Link href={`/product/${product?.slug}`}>{product?.name}</Link></h6>
-                            <h5>৳{product?.new_price}</h5>
+                            <h6><Link href={`/shop/${shop?.slug}`}>{shop?.name}</Link></h6>
+                            
                         </div>
                     </div>
-                </SwiperSlide >
+                
                     ))
                 }
                 

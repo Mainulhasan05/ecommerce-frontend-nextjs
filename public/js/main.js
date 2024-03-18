@@ -10,7 +10,7 @@
 'use strict';
 
 (function ($) {
-    alert('Hello from main.js');
+    
     /*------------------
         Preloader
     --------------------*/
