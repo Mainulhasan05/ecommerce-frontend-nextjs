@@ -11,13 +11,13 @@ const ProductDetailsSection = ({ data }) => {
                     <div className="col-lg-6 col-md-6">
                         <div className="product__details__pic">
                             <div className="product__details__pic__item">
-                                <img className="product__details__pic__item--large"
+                                <img width={200} height={600} className="product__details__pic__item--large"
                                     src={process.env.API_URL + image} alt="" />
                             </div>
                             <div className="product__details__pic__slider owl-carousel">
                                 {
                                     data?.images?.map((image, index) => (
-                                        <img key={index} data-imgbigurl={image} src={image} alt="" />
+                                        <img key={index} data-imgbigurl={process.env.API_URL+image?.url} src={process.env.API_URL+image?.url} alt="" />
                                     ))
                                 }
                                 {/* <img data-imgbigurl="/img/product/details/product-details-3.jpg"

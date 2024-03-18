@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className="humberger__menu__overlay"></div>
     <div className="humberger__menu__wrapper">
         <div className="humberger__menu__logo">
-            <a href="#"><img src="/img/logo.png" alt=""/></a>
+            <Link href="/"><img className='img-fluid' src="/img/logo.png" alt=""/></Link>
         </div>
         <div className="humberger__menu__cart">
             <ul>
@@ -110,7 +110,7 @@ const Navbar = () => {
             <div className="row">
                 <div className="col-lg-3">
                     <div className="header__logo">
-                        <Link href="/"><img className='img-fluid' src="/img/logo.png" alt=""/></Link>
+                        <Link href="/"><img id='logo' className='img-fluid' src="/img/logo.png" alt=""/></Link>
                     </div>
                 </div>
                 <div className="col-lg-6">

@@ -1,6 +1,6 @@
 import React from 'react'
 import CategorySlide from '../../Components/Homepage/CategorySlide'
-import FeaturedProductsSlide from '../../Components/Homepage/FeaturedProductsSlide'
+import TrendingProducts from '../../Components/Homepage/TrendingProducts'
 import axiosInstance from '../../utils/axiosInstance'
 import { useDispatch } from 'react-redux'
 import Head from 'next/head'
@@ -56,7 +56,7 @@ const index = ({data}) => {
       </Head>
       <HeroSection/>
       <CategorySlide/>
-      <FeaturedProductsSlide/>
+      <TrendingProducts/>
       <FeaturedShops/>
       <NewArrivals/>
     </div>

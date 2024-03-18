@@ -1,15 +1,20 @@
-/*  ---------------------------------------------------
-    Template Name: Ogani
-    Description:  Ogani eCommerce  HTML Template
-    Author: Colorlib
-    Author URI: https://colorlib.com
-    Version: 1.0
-    Created: Colorlib
----------------------------------------------------------  */
 
 'use strict';
 
 (function ($) {
+    document.addEventListener('DOMContentLoaded', function () {
+        console.log("got you")
+        var toggleButton = document.querySelector('.hero__categories__all');
+        var categoryList = document.getElementById('category_list');
+    
+        toggleButton.addEventListener('click', function () {
+            if (categoryList.style.maxHeight) {
+                categoryList.style.maxHeight = null;
+            } else {
+                categoryList.style.maxHeight = categoryList.scrollHeight + "px";
+            }
+        });
+    });
     
     /*------------------
         Preloader
@@ -98,9 +103,7 @@
 
     $('.hero__categories__all').on('click', function(){
         $('.hero__categories ul').slideToggle(400);
-        // make display none
-        // category_list id is in the header, make it display none
-        $('#category_list').css('display', 'none');
+        console.log("kicchu hoyna")
     });
 
     /*--------------------------
