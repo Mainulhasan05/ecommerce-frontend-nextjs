@@ -3133,6 +3133,7 @@ ol {
 		overflow: hidden;
 	}
 	#logo {
+		margin-top: 20px;
 		max-width: 55%;
 	}
 }
@@ -3141,6 +3142,7 @@ ol {
 
 @media only screen and (max-width: 767px) {
 	#logo {
+		margin-top: 20px;
 		max-width: 55%;
 	}
 	.products_container{
