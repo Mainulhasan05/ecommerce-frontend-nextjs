@@ -117,7 +117,7 @@ const Navbar = () => {
                     <nav className="header__menu">
                         <ul>
                             <li className="active"><Link href="/">Home</Link></li>
-                            <li><Link href="/shop">Shop</Link></li>
+                            <li><Link href="/shops">Shop</Link></li>
                             <li><a href="#">Pages</a>
                                 <ul className="header__menu__dropdown">
                                     <li><a href="./shop-details.html">Shop Details</a></li>

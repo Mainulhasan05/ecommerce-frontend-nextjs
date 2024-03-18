@@ -4,11 +4,9 @@ import axiosInstance from '../../../utils/axiosInstance'
 
 export const getServerSideProps = async (context) => {
   const {slug} = context.params
-  console.log("printing")
-  console.log(context.params)
-  console.log(slug)
+  
   if(slug){
-    console.log(typeof slug)
+    
     if(typeof slug === 'string'){
       try {
         console.log("eta pailam",slug)
