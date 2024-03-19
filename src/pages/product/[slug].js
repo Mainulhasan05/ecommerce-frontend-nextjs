@@ -9,7 +9,7 @@ export const getServerSideProps = async (context) => {
     
     if(typeof slug === 'string'){
       try {
-        console.log("eta pailam",slug)
+        
         const response = await axiosInstance.get(`/api/product/${slug}`);
         const data = response.data?.data;
         return {
