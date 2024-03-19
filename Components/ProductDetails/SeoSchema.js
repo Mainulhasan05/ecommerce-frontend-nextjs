@@ -12,7 +12,7 @@ const SeoSchema = ({data}) => {
           description: data?.description,
           images: [
             {
-              url: data?.image
+              url: process.env.API_URL+ data?.image
             }
           ]
         }}

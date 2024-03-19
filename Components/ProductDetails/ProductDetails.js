@@ -9,7 +9,7 @@ const ProductDetails = ({data}) => {
     <div>
       <SeoSchema data={data}/>
         <ProductHeroSection data={data}/>
-        <ProductBreadcumbSection data={data}/>
+        {/* <ProductBreadcumbSection data={data}/> */}
         <ProductDetailsSection data={data}/>
 
     </div>

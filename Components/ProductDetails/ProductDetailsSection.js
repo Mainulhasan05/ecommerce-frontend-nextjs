@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import BuyNowModal from './BuyNowModal'
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
+import Link from 'next/link'
 
 const ProductDetailsSection = ({ data }) => {
     const [image, setImage] = useState(data.image)
@@ -11,21 +14,12 @@ const ProductDetailsSection = ({ data }) => {
                     <div className="col-lg-6 col-md-6">
                         <div className="product__details__pic">
                             <div className="product__details__pic__item">
-                                <img width={200} height={600} className="product__details__pic__item--large"
-                                    src={process.env.API_URL + image} alt="" />
-                            </div>
-                            <div className="product__details__pic__slider owl-carousel">
-                                {
-                                    data?.images?.map((image, index) => (
-                                        <img key={index} data-imgbigurl={process.env.API_URL+image?.url} src={process.env.API_URL+image?.url} alt="" />
-                                    ))
-                                }
-                                {/* <img data-imgbigurl="/img/product/details/product-details-3.jpg"
-                                src="/img/product/details/thumb-2.jpg" alt=""/>
-                            <img data-imgbigurl="/img/product/details/product-details-5.jpg"
-                                src="/img/product/details/thumb-3.jpg" alt=""/>
-                            <img data-imgbigurl="/img/product/details/product-details-4.jpg"
-                                src="/img/product/details/thumb-4.jpg" alt=""/> */}
+                                <ImageGallery showNav={true} showIndex={true} autoPlay={false} showFullscreenButton={true} items={data?.images?.map((image, index) => ({
+                                    original: process.env.API_URL + image?.url,
+                                    thumbnail: process.env.API_URL + image?.url
+                                }))} />
+                                {/* <img width={200} height={500} className="product__details__pic__item--large"
+                                    src={process.env.API_URL + image} alt="" /> */}
                             </div>
                         </div>
                     </div>
@@ -83,7 +77,14 @@ const ProductDetailsSection = ({ data }) => {
                                     }
                                 </span></li>
                                 <li><b>Shipping</b> <span>01 day shipping. <samp>Free pickup today</samp></span></li>
-                                <li><b>Weight</b> <span>0.5 kg</span></li>
+                                {/* <li><b>Weight</b> <span>0.5 kg</span></li> */}
+                                <li><b>Seller </b> 
+                                <Link href={`/shop/${data?.shop?.slug}`}>
+                                    
+                                <span style={{fontWeight:"600"}}>{data?.shop?.name}</span>
+                                
+                                </Link>
+                                </li>
                                 <li><b>Share on</b>
                                     <div className="share">
                                         <a href="#"><i className="fa fa-facebook"></i></a>

@@ -37,7 +37,7 @@ export const getServerSideProps = async (context) => {
 }
 
 const product = ({data}) => {
-  console.log(data)
+  
   return (
     <div>
       <ProductDetails data={data}/>

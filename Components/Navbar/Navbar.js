@@ -49,7 +49,7 @@ const Navbar = () => {
                     </ul>
                 </li>
                 <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./contact.html">Contact</a></li>
+                {/* <li><a href="./contact.html">Contact</a></li> */}
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -117,6 +117,7 @@ const Navbar = () => {
                     <nav className="header__menu">
                         <ul>
                             <li className="active"><Link href="/">Home</Link></li>
+                            <li><Link href="/all-products">All Products</Link></li>
                             <li><Link href="/shops">Shop</Link></li>
                             <li><a href="#">Pages</a>
                                 <ul className="header__menu__dropdown">
