@@ -19,27 +19,15 @@ const FeaturedCategories = () => {
                     </div>
                 </div>
 
-                <div className="row d-flex gap-1">
-                    {homedata.featuredCategories.map((shop, index) => (
-                        <div key={index} className="card col-4">
-                            <img width={30} height={30} className="card-img-top img-fluid" src={process.env.API_URL + shop.image} alt="" />
-                            <div className="card-body">
-                                <h5 className="card-title text-center">{shop.name}</h5>
-                            </div>
-                        </div>
+                <div className="categories">
+                    {homedata.featuredCategories.map((category, index) => (
+                        <Link href={`/category/${category?.slug}`} key={index} className="category">
+                            <img src={process.env.API_URL + category.image} alt="" />
+                            <span class="category-name">{category.name}</span>
+                        </Link>
                     ))}
 
-                    {
-                        homedata.featuredCategories.length < 6 && Array(6 - homedata.featuredShops.length).fill(0).map((_, index) => (
-                            <div key={index} className="card">
-                                <img width={100} height={80} className="card-img-top img-fluid" src="https://via.placeholder.com/150" alt="" />
-                                <div className="card-body">
-                                    <h5 className="card-title">Shop Name</h5>
-
-                                </div>
-                            </div>
-                        ))
-                    }
+                    
                 </div>
 
 
