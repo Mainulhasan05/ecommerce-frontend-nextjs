@@ -48,26 +48,31 @@ h6 {
     transition: max-height 0.4s ease;
 }
 /* styles/sidebar.css */
-.category-card {
-	border: none;
-	border-radius: 10px;
-	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-	padding: 20px;
-	margin-bottom: 20px;
-  }
-  .category-item {
-	cursor: pointer;
-  }
-  .subcategory-card {
-	display: none;
-  }
-  .category-item:hover .subcategory-card {
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 100%;
-	z-index: 1;
-  }
+.parent_categories {
+    position: relative;
+}
+
+.parent_categories:hover .sub_categories {
+    display: block;
+	z-index: 1000;
+	background: #fff;
+	max-height: 1000px;
+	left: 50%;
+	overflow: hidden;
+	transition: max-height 0.9s ease
+}
+
+.sub_categories {
+    display: none;
+    position: absolute;
+    width: 200px;
+    top: 0;
+    left: 50%;
+}
+
+/* style={{display:"none",position:'absolute',width:"200px",background:"white",top:"0",left:"0",marginLeft:"150px",zIndex:"1000"}} */
+
+
     /* ends here  */
 
 p {
