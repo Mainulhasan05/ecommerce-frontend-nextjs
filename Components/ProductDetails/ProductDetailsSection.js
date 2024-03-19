@@ -3,7 +3,7 @@ import BuyNowModal from './BuyNowModal'
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import Link from 'next/link'
-import { FacebookShareButton, TwitterShareButton, InstapaperShareButton, PinterestShareButton } from 'react-share';
+import { FacebookShareButton,FacebookShareCount } from 'react-share';
 
 const ProductDetailsSection = ({ data }) => {
     const [image, setImage] = useState(data.image)
@@ -69,7 +69,7 @@ const ProductDetailsSection = ({ data }) => {
 
                             </div>
                             <button data-bs-toggle="modal" data-bs-target="#exampleModal" className="primary-btn btn">Buy Now</button>
-
+                            
                             <a href="#" className="heart-icon"><span className="icon_heart_alt"></span></a>
                             <ul>
                                 <li><b>Availability</b> <span>
@@ -80,35 +80,19 @@ const ProductDetailsSection = ({ data }) => {
                                 {/* <samp>Free pickup today</samp> */}
                                 <li><b>Shipping</b> <span>2-3 day shipping. </span></li>
                                 {/* <li><b>Weight</b> <span>0.5 kg</span></li> */}
-                                <li><b>Seller </b>
-                                    <Link href={`/shop/${data?.shop?.slug}`}>
-
-                                        <span style={{ fontWeight: "600" }}>{data?.shop?.name}</span>
-
-                                    </Link>
+                                <li><b>Seller </b> 
+                                <Link href={`/shop/${data?.shop?.slug}`}>
+                                    
+                                <span style={{fontWeight:"600"}}>{data?.shop?.name}</span>
+                                
+                                </Link>
                                 </li>
                                 <li><b>Share on</b>
                                     <div className="share">
-                                        <a href="#">
-                                            <FacebookShareButton url={window.location.href} quote={data?.name}>
-                                                <i className="fa fa-facebook"></i>
-                                            </FacebookShareButton>
-                                        </a>
-                                        <a href="#">
-                                            <TwitterShareButton url={window.location.href} title={data?.name}>
-                                                <i className="fa fa-twitter"></i>
-                                            </TwitterShareButton>
-                                        </a>
-                                        <a href="#">
-                                        <InstapaperShareButton url={window.location.href} title={data?.name}>
-                                            <i className="fa fa-instagram"></i>
-                                        </InstapaperShareButton>
-                                        </a>
-                                        <a href="#">
-                                            <PinterestShareButton url={window.location.href} description={data?.name}>
-                                            <i className="fa fa-pinterest"></i>
-                                            </PinterestShareButton>
-                                        </a>
+                                        <a href="#"><i className="fa fa-facebook"></i></a>
+                                        <a href="#"><i className="fa fa-twitter"></i></a>
+                                        <a href="#"><i className="fa fa-instagram"></i></a>
+                                        <a href="#"><i className="fa fa-pinterest"></i></a>
                                     </div>
                                 </li>
                             </ul>
