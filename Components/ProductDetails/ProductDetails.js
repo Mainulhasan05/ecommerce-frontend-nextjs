@@ -2,6 +2,7 @@ import React from 'react'
 import ProductHeroSection from './ProductHeroSection'
 import ProductBreadcumbSection from './ProductBreadcumbSection'
 import ProductDetailsSection from './ProductDetailsSection'
+
 import SeoSchema from './SeoSchema'
 
 const ProductDetails = ({data}) => {
