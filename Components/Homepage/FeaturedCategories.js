@@ -21,11 +21,10 @@ const FeaturedCategories = () => {
 
                 <div className="row d-flex gap-1">
                     {homedata.featuredCategories.map((shop, index) => (
-                        <div key={index} className="card col-md-2">
+                        <div key={index} className="card col-4">
                             <img width={30} height={30} className="card-img-top img-fluid" src={process.env.API_URL + shop.image} alt="" />
                             <div className="card-body">
-                                <h5 className="card-title">{shop.name}</h5>
-                                <p className="card-text">{shop.description}</p>
+                                <h5 className="card-title text-center">{shop.name}</h5>
                             </div>
                         </div>
                     ))}
