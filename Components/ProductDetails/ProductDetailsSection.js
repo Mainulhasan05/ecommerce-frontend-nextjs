@@ -8,6 +8,7 @@ import { FacebookShareButton,FacebookShareCount } from 'react-share';
 const ProductDetailsSection = ({ data }) => {
     const [image, setImage] = useState(data.image)
     const [quantity, setQuantity] = useState(1)
+    
     return (
         <section className="product-details spad">
             <div className="container">
@@ -117,15 +118,15 @@ const ProductDetailsSection = ({ data }) => {
                             <div className="tab-content">
                                 <div className="tab-pane active" id="tabs-1" role="tabpanel">
                                     <div className="product__details__tab__desc">
-                                        <h6>Products Infomation</h6>
-                                        {/* dangerouslysetinner html */}
+                                        
+                                        <div dangerouslySetInnerHTML={{ __html: (data?.description) }} />
 
                                     </div>
                                 </div>
                                 <div className="tab-pane" id="tabs-2" role="tabpanel">
                                     <div className="product__details__tab__desc">
                                         <h6>Products Infomation {data?.description}</h6>
-                                        <div dangerouslySetInnerHTML={{ __html: (data?.description) }} />
+                                        
                                     </div>
                                 </div>
                                 <div className="tab-pane" id="tabs-3" role="tabpanel">
