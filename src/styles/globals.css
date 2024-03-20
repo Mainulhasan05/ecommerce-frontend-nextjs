@@ -1,0 +1,23 @@
+.my_mobile_nav {
+    clear: both;
+    color: #fff;
+    margin: 0;
+    font-size: .875em;
+}
+.my_mobile_nav, .my_mobile_nav ul {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+}
+.humberger__menu__wrapper .my_mobile_nav a {
+    color: #1c1c1c;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 8px 0;
+}
+
+.humberger__menu__wrapper .my_mobile_nav ul {
+    margin: 0;
+}

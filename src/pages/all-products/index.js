@@ -1,23 +1,23 @@
 import React from 'react'
+import AllProductsHome from '../../../Components/All-Products/AllProductsHome'
+import axiosInstance from '../../../utils/axiosInstance'
+
 export const getServerSideProps=async(context)=>{
-    console.log(context.resolvedUrl)
-    // return {
-    //     redirect: {
-    //     destination: '/',
-    //     permanent: false,
-    //     },
-    // }
+    const resolvedUrl=context.resolvedUrl
+    const response=await axiosInstance.get(`/api/${resolvedUrl}`)
+    const data=await response.data?.data
     return {
         props: {
-            data: "Hello World"
+            data: data
         }
     }
     
+    
 }
-const index = () => {
+const index = ({data}) => {
   return (
     <div>
-      
+      <AllProductsHome data={data}/>
     </div>
   )
 }

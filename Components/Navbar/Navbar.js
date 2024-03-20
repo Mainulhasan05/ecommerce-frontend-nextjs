@@ -36,23 +36,37 @@ const Navbar = () => {
                 <a href="#"><i className="fa fa-user"></i> Login</a>
             </div>
         </div>
-        <nav className="humberger__menu__nav mobile-menu">
+        
+        <div id="mobile-menu-wrap2">
+        <nav class="slicknav_nav slicknav_hidden my_mobile_nav" aria-hidden="true" role="menu" >
             <ul>
-                <li className="active"><Link href="/">Home</Link></li>
-                <li><Link href="/shop">Shop</Link></li>
-                <li><a href="#">Pages</a>
-                    <ul className="header__menu__dropdown">
-                        <li><a href="./shop-details.html">Shop Details</a></li>
-                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                        <li><a href="./checkout.html">Check Out</a></li>
-                        <li><a href="./blog-details.html">Blog Details</a></li>
+                <li class="active"><Link href="/all-products" role="menuitem">All Products</Link></li>
+                <li><Link href="/shops" role="menuitem">Shops</Link></li>
+                <li className="nav-item">
+                <Link href="#">
+                    <span className="nav-link">Pages <span className="slicknav_arrow">►</span></span>
+                </Link>
+                <ul className="nav flex-column ml-3">
+                    <li className="nav-item">
+                        <Link href="/shop-details">
+                            <span className="nav-link">Shop Details</span>
+                        </Link>
+                    </li>
+                </ul>
+            </li>
+                {/* <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabIndex="-1" class="slicknav_item slicknav_row" ><a href="#">Pages</a>
+                    <span class="slicknav_arrow">►</span></a><ul class="header__menu__dropdown slicknav_hidden" role="menu" aria-hidden="true" >
+                        <li><a href="./shop-details.html" role="menuitem" tabindex="-1">Shop Details</a></li>
+                        <li><a href="./shoping-cart.html" role="menuitem" tabindex="-1">Shoping Cart</a></li>
+                        <li><a href="./checkout.html" role="menuitem" tabindex="-1">Check Out</a></li>
+                        <li><a href="./blog-details.html" role="menuitem" tabindex="-1">Blog Details</a></li>
                     </ul>
-                </li>
-                <li><a href="./blog.html">Blog</a></li>
-                {/* <li><a href="./contact.html">Contact</a></li> */}
+                </li> */}
+                {/* <li><a href="./blog.html" role="menuitem">Blog</a></li>
+                <li><a href="./contact.html" role="menuitem">Contact</a></li> */}
             </ul>
         </nav>
-        <div id="mobile-menu-wrap"></div>
+        </div>
         <div className="header__top__right__social">
             <a href="#"><i className="fa fa-facebook"></i></a>
             <a href="#"><i className="fa fa-twitter"></i></a>
@@ -119,16 +133,16 @@ const Navbar = () => {
                             <li className="active"><Link href="/">Home</Link></li>
                             <li><Link href="/all-products">All Products</Link></li>
                             <li><Link href="/shops">Shop</Link></li>
-                            <li><a href="#">Pages</a>
+                            {/* <li><a href="#">Pages</a>
                                 <ul className="header__menu__dropdown">
                                     <li><a href="./shop-details.html">Shop Details</a></li>
                                     <li><a href="./shoping-cart.html">Shoping Cart</a></li>
                                     <li><a href="./checkout.html">Check Out</a></li>
                                     <li><a href="./blog-details.html">Blog Details</a></li>
                                 </ul>
-                            </li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            </li> */}
+                            {/* <li><a href="./blog.html">Blog</a></li>
+                            <li><a href="./contact.html">Contact</a></li> */}
                         </ul>
                     </nav>
                 </div>
