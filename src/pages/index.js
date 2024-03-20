@@ -46,7 +46,7 @@ const index = ({data}) => {
                 {/* Open Graph meta tags */}
                 <meta property="og:title" content="SuchonaMart - Best Online Shopping Platform in Chapai Nawabganj" />
                 <meta property="og:description" content="Welcome to SuchonaMart - your one-stop destination for online shopping in Chapai Nawabganj. Discover a wide range of products and enjoy convenient delivery options." />
-                <meta property="og:image" content="https://api.rifatewu2.xyz/uploads/categories/1710008846788-Suchona%20mart.png" />
+                <meta property="og:image" content="https://suchonamart.com/img/logo.png" />
                 <meta property="og:url" content="https://suchonamart.com/" />
                 <meta property="og:type" content="website" />
 
@@ -54,7 +54,7 @@ const index = ({data}) => {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="SuchonaMart - Best Online Shopping Platform in Chapai Nawabganj" />
                 <meta name="twitter:description" content="Welcome to SuchonaMart - your one-stop destination for online shopping in Chapai Nawabganj. Discover a wide range of products and enjoy convenient delivery options." />
-                <meta name="twitter:image" content="https://api.rifatewu2.xyz/uploads/categories/1710008846788-Suchona%20mart.png" />
+                <meta name="twitter:image" content="https://suchonamart.com/img/logo.png" />
       </Head>
       <HeroSection/>
       <FeaturedCategories/>
