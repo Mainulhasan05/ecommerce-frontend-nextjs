@@ -1,8 +1,22 @@
 import React, { useState } from 'react'
 import { motion } from "framer-motion"
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import axiosInstance from '../../utils/axiosInstance'
+
 const AllProductsHome = ({ data }) => {
     const [products, setProducts] = useState(data.products)
+    
+    const router=useRouter()
+    const handleSelect = async(e) => {
+        
+        // router.push({
+        //     pathname: '/all-products',
+        //     query: { price: e.target.value }
+        // })
+        // console.log(router)
+        // console.log(router.asPath)
+    }
     return (
         <section className="product spad">
             <div className="container">
@@ -15,9 +29,9 @@ const AllProductsHome = ({ data }) => {
                                 <div className="col-lg-4 col-md-5">
                                     <div className="filter__sort">
                                         <span>Sort By</span>
-                                        <select>
-                                            <option value="0">Default</option>
-                                            <option value="0">Default</option>
+                                        <select onChange={handleSelect}>
+                                            <option value="asc">Price: Low to High</option>
+                                            <option value="desc">Price: High to Low</option>
                                         </select>
                                     </div>
                                 </div>
@@ -39,7 +53,7 @@ const AllProductsHome = ({ data }) => {
                                 products.map((product, index) => {
                                     return (
                                         <motion.div animate={{ scale: 1 }} whileHover={{ scale: 1.1 }} transition={{ duration: 0.5 }}
-                                            className="col-lg-3 col-md-4 col-sm-6  p-3">
+                                            className="col-lg-3 col-md-4 col-6  p-3">
                                             <div className="featured__item">
                                                 <div className="text-center">
                                                     <Link href={`/product/${product?.slug}`}>

@@ -16,6 +16,7 @@ export const getServerSideProps=async(context)=>{
     
 }
 const index = ({data}) => {
+  
   return (
     <div>
       <Head>
