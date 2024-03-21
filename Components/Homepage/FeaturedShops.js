@@ -6,13 +6,13 @@ import Slider from "react-slick";
 
 const FeaturedShops = () => {
   var settings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 6,
     slidesToScroll: 2,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     cssEase: "linear",
     responsive: [
       {
@@ -56,27 +56,13 @@ const FeaturedShops = () => {
         
         <Slider {...settings}>
       {homedata.featuredShops.map((shop, index) => (
-        <div key={index} className="card">
-          <img width={100} height={80} className="card-img-top img-fluid" src={process.env.API_URL + shop.image} alt="" />
-          <div className="card-body">
-            <h5 className="card-title">{shop.name}</h5>
-            <p className="card-text">{shop.description}</p>
-          </div>
+        <div  key={index} className="mx-2 featured_shop_card text-center">
+          <img className='centered-image' width={100} height={100} src={process.env.API_URL + shop.image} alt="" />
+            <h4>{shop?.name}</h4>
+          
+          
         </div>
-      ))}
-
-      {
-        homedata.featuredShops.length<6  && Array(6-homedata.featuredShops.length).fill(0).map((_,index)=>(
-          <div key={index} className="card">
-          <img width={100} height={80} className="card-img-top img-fluid" src="https://via.placeholder.com/150" alt="" />
-          <div className="card-body">
-            <h5 className="card-title">Shop Name</h5>
-            
-          </div>
-        </div>
-        ))
-      }
-      
+      ))}      
     </Slider>
       </div>
     </section>

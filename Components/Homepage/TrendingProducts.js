@@ -72,17 +72,7 @@ const FeaturedProductsSlide = () => {
                 
                     ))
                 }
-                {
-        homedata.trendingProducts.length<6  && Array(6-homedata.featuredShops.length).fill(0).map((_,index)=>(
-          <div key={index} className="card">
-          <img width={100} height={80} className="card-img-top img-fluid" src="https://via.placeholder.com/150" alt="" />
-          <div className="card-body">
-            <h5 className="card-title">Shop Name</h5>
-            
-          </div>
-        </div>
-        ))
-      }
+       
                 </Slider>
                 
             {/* </div> */}
