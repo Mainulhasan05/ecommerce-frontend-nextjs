@@ -40,6 +40,26 @@ const product = ({data}) => {
   
   return (
     <div>
+       <Head>
+        {/* SEO Meta Tags */}
+        <title>{data?.name} - Suchonamart</title>
+        <meta name="description" content="Product is so much good" />
+        <meta name="keywords" content={`best product+ ${data?.name}`} />
+        <meta name="author" content={data?.shop?.name} />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content={`${data?.name} - Suchonamart`} />
+        <meta property="og:description" content={`${data?.name} - Suchonamart ${data?.description}`} />
+        <meta property="og:image" content={process.env.API_URL+data?.image} />
+        <meta property="og:url" content={`https://suchonamart.com/product/${data?.slug}`} />
+        <meta property="og:type" content="product" />
+        
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:title" content={`${data?.name} - Suchonamart`} />
+        <meta name="twitter:description" content={`${data?.name} - Suchonamart ${data?.description}`} />
+        <meta name="twitter:image" content={process.env.API_URL+data?.image} />
+        <meta name="twitter:card" content={process.env.API_URL+data?.image} />
+      </Head>
       <ProductDetails data={data}/>
     </div>
   )
