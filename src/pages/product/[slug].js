@@ -1,6 +1,7 @@
 import React from 'react'
 import ProductDetails from '../../../Components/ProductDetails/ProductDetails'
 import axiosInstance from '../../../utils/axiosInstance'
+import Head from 'next/head'
 
 export const getServerSideProps = async (context) => {
   const {slug} = context.params
