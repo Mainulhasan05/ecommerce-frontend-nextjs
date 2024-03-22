@@ -3,15 +3,24 @@ import MyComponent from './ScriptLoader'
 import { useSelector } from 'react-redux'
 import Link from 'next/link'
 import HeroSection from '../Homepage/HeroSection'
+import { useRouter } from 'next/router'
 
 const Navbar = () => {
     const {homedata} = useSelector(state => state.home)
-    
+    const router=useRouter()
+    useEffect(() => {
+        // show__humberger__menu__wrapper remove this class to hide the sidebar
+        document.querySelector('.humberger__menu__wrapper').classList.remove('show__humberger__menu__wrapper')
+        // remove active class from the overlay
+        document.querySelector('.humberger__menu__overlay').classList.remove('active')
+        // remove over_hid from body
+        document.querySelector('body').classList.remove('over_hid')
+    }, [router])
   return (
     <>
     <MyComponent/>
         <div className="humberger__menu__overlay"></div>
-    <div className="humberger__menu__wrapper">
+    <div className="humberger__menu__wrapper" id='sidebar'>
         <div className="humberger__menu__logo">
             <Link href="/"><img className='img-fluid' src="/img/logo.png" alt=""/></Link>
         </div>
