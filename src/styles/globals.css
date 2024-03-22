@@ -79,3 +79,34 @@
     color: #999;
     font-size: 14px;
 }
+
+.product__pagination li, .blog__pagination li {
+    display: inline-block;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #b2b2b2;
+    font-size: 14px;
+    color: #b2b2b2;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    -webkit-transition: all, 0.3s;
+    -moz-transition: all, 0.3s;
+    -ms-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    transition: all, 0.3s;
+}
+/* for active */
+.product__pagination li.active a, .blog__pagination li.active a {
+    background: #7fad39;
+    border-color: #7fad39;
+    color: #ffffff;
+}
+.product__pagination a:hover, .blog__pagination a:hover {
+    background: #7fad39;
+    border-color: #7fad39;
+    color: #ffffff;
+}
