@@ -150,7 +150,7 @@ const ProductDetailsSection = ({ data }) => {
                     </div>
                 </div>
             </div>
-            <BuyNowModal />
+            <BuyNowModal  product={data} />
         </section>
     )
 }
