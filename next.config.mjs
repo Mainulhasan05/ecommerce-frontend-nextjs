@@ -4,6 +4,7 @@ const nextConfig = {
   env: {
     // API_URL: "https://api.rifatewu2.xyz",
     API_URL: "https://api.mainulhasan05.xyz"
+    // API_URL: "http://localhost:5000",
   }
 };
 

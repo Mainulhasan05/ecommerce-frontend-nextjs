@@ -5,6 +5,7 @@ const BuyNowModal = () => {
         name: '',
         phone: '',
         address: '',
+        notes: '',
         quantity: 1
     })
     const handleChanges = (e) => {

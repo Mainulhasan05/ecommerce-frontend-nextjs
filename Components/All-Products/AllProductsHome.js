@@ -12,16 +12,23 @@ const AllProductsHome = ({ data }) => {
 
     const router = useRouter()
     const handleSelect = async (e) => {
-
+        const updatedQuery = { ...router.query, page: 1, price: e.target.value };
+        const updatedPath = `/api${router.pathname}?${new URLSearchParams(updatedQuery)}`;       
         router.push({
             pathname: '/all-products',
-            query: {...router.query,page:1,price: e.target.value}
-        })
-        const res=await axiosInstance.get(`/api${router.asPath}`)
-        setProducts(res.data?.data?.products)
-    }
+            query: updatedQuery
+        });
+        try {
+            const res = await axiosInstance.get(updatedPath);
+
+            setProducts(res.data?.data?.products);
+            console.log('Data:', res.data?.data?.products)
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+    
     const handlePageChange = async (e) => {
-        console.log(e)
         router.push({
             pathname: '/all-products',
             query: {...router.query, page: e.selected + 1 }
