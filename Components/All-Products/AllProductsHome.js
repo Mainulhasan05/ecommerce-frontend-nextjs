@@ -9,7 +9,7 @@ import SearchbarComponent from '../Searchpage/SearchbarComponent'
 
 const AllProductsHome = ({ data }) => {
     const [products, setProducts] = useState(data.products)
-
+    const [loading,setLoading] = useState(false)
     const router = useRouter()
     const handleSelect = async (e) => {
         const updatedQuery = { ...router.query, page: 1, price: e.target.value };
@@ -19,10 +19,11 @@ const AllProductsHome = ({ data }) => {
             query: updatedQuery
         });
         try {
+            setLoading(true)
             const res = await axiosInstance.get(updatedPath);
-
+            setLoading(false)
             setProducts(res.data?.data?.products);
-            console.log('Data:', res.data?.data?.products)
+            
         } catch (error) {
             console.error('Error fetching data:', error);
         }
@@ -33,7 +34,9 @@ const AllProductsHome = ({ data }) => {
             pathname: '/all-products',
             query: {...router.query, page: e.selected + 1 }
         })
+        setLoading(true)
         const res=await axiosInstance.get(`/api${router.asPath}`)
+        setLoading(false)
         setProducts(res.data?.data?.products)
     }
     return (
@@ -44,7 +47,14 @@ const AllProductsHome = ({ data }) => {
             <section className="product spad">
 
                 <div className="container">
+                    <div className="text-center">
+                        {
+                            loading && <div style={{color:"#7fad39"}} className="spinner-border text-primary" role="status">
+                                <span style={{color:'#7fad39'}} className="visually-hidden">Loading...</span>
+                            </div>
 
+                        }
+                    </div>
                     <div className="row">
 
                         <div className="col-lg-12 col-md-7">

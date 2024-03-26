@@ -5,6 +5,7 @@ import axiosInstance from '../../../utils/axiosInstance'
 export const getServerSideProps = async (context) => {
     const resolvedUrl = context.resolvedUrl
     try {
+        console.log(resolvedUrl)
         const response = await axiosInstance.get(`/api/${resolvedUrl}`)
         const data = await response.data?.data
         
