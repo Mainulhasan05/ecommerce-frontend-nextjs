@@ -56,12 +56,12 @@ const FeaturedShops = () => {
         
         <Slider {...settings}>
       {homedata.featuredShops.map((shop, index) => (
-        <div  key={index} className="mx-2 featured_shop_card text-center">
+        <Link href={`/shop/${shop?.slug}`}  key={index} className="mx-2 featured_shop_card text-center">
           <img className='centered-image' width={100} height={100} src={process.env.API_URL + shop.image} alt="" />
             <h4>{shop?.name}</h4>
           
           
-        </div>
+        </Link>
       ))}      
     </Slider>
       </div>

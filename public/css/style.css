@@ -93,6 +93,9 @@ h6 {
   
   /* Media query for mobile */
   @media (max-width: 768px) {
+	.home_nav{
+	display: none;
+	}
 	.categories {
 	  grid-template-columns: repeat(3, 1fr);
 	}

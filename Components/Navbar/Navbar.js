@@ -55,7 +55,15 @@ const Navbar = () => {
             <ul>
                 <li class="active"><Link href="/all-products" role="menuitem">All Products</Link></li>
                 <li><Link href="/shops" role="menuitem">Shops</Link></li>
-                <li className="nav-item">
+                {
+                    homedata?.categories?.map((category,index)=>(
+                        <li className='parent_categories' >
+                        <Link href={`/category/${category?.slug}`}>{category?.name}</Link>
+                        
+                        </li>
+                    ))
+                }
+                {/* <li className="nav-item">
                 <Link href="#">
                     <span className="nav-link">Pages <span className="slicknav_arrow">►</span></span>
                 </Link>
@@ -66,7 +74,7 @@ const Navbar = () => {
                         </Link>
                     </li>
                 </ul>
-            </li>
+            </li> */}
                 {/* <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true" tabIndex="-1" class="slicknav_item slicknav_row" ><a href="#">Pages</a>
                     <span class="slicknav_arrow">►</span></a><ul class="header__menu__dropdown slicknav_hidden" role="menu" aria-hidden="true" >
                         <li><a href="./shop-details.html" role="menuitem" tabindex="-1">Shop Details</a></li>
@@ -81,7 +89,7 @@ const Navbar = () => {
         </nav>
         </div>
         <div className="header__top__right__social">
-            <a href="#"><i className="fa fa-facebook"></i></a>
+            <a href="https://www.facebook.com/SuchonaMartOfficial"><i className="fa fa-facebook"></i></a>
             <a href="#"><i className="fa fa-twitter"></i></a>
             <a href="#"><i className="fa fa-linkedin"></i></a>
             <a href="#"><i className="fa fa-pinterest-p"></i></a>
@@ -111,7 +119,7 @@ const Navbar = () => {
                     <div className="col-lg-6 col-md-6">
                         <div className="header__top__right">
                             <div className="header__top__right__social">
-                                <a href="#"><i className="fa fa-facebook"></i></a>
+                                <a href="https://www.facebook.com/SuchonaMartOfficial"><i className="fa fa-facebook"></i></a>
                                 <a href="#"><i className="fa fa-twitter"></i></a>
                                 <a href="#"><i className="fa fa-linkedin"></i></a>
                                 <a href="#"><i className="fa fa-pinterest-p"></i></a>

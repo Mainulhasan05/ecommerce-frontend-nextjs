@@ -8,11 +8,11 @@ import ProductCard from '../All-Products/ProductCard';
 import SearchbarComponent from '../Searchpage/SearchbarComponent'
 
 const CategoryHome = ({ data }) => {
-    const [products, setProducts] = useState(data.products)
+    const [products, setProducts] = useState(data?.category?.products)
     const [loading,setLoading] = useState(false)
     const router = useRouter()
     const handleSelect = async (e) => {
-      console.log(router.query.slug)
+      
           const url=`/all-products?category=${router.query.slug}&price=${e.target.value}`
           router.push(url)
 
