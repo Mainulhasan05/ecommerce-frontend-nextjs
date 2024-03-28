@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import MyComponent from './ScriptLoader'
 import { useSelector } from 'react-redux'
 import Link from 'next/link'
@@ -9,13 +9,17 @@ const Navbar = () => {
     const {homedata} = useSelector(state => state.home)
     const router=useRouter()
     useEffect(() => {
-        // show__humberger__menu__wrapper remove this class to hide the sidebar
         document.querySelector('.humberger__menu__wrapper').classList.remove('show__humberger__menu__wrapper')
-        // remove active class from the overlay
         document.querySelector('.humberger__menu__overlay').classList.remove('active')
-        // remove over_hid from body
         document.querySelector('body').classList.remove('over_hid')
     }, [router])
+    const [scroll, setScroll] = useState(false);
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+          
+          setScroll(window.scrollY > 400);
+        });
+      }, []);
   return (
     <>
     <MyComponent/>
@@ -129,7 +133,7 @@ const Navbar = () => {
                 </div>
             </div>
         </div>
-        <div className="container">
+        <div className={`container ${scroll && 'fixed-nav'}`}>
             <div className="row">
                 <div className="col-lg-3">
                     <div className="header__logo">

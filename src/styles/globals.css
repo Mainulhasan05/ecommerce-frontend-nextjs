@@ -4,11 +4,14 @@
     margin: 0;
     font-size: .875em;
 }
-.my_mobile_nav, .my_mobile_nav ul {
+
+.my_mobile_nav,
+.my_mobile_nav ul {
     list-style: none;
     overflow: hidden;
     padding: 0;
 }
+
 .humberger__menu__wrapper .my_mobile_nav a {
     color: #1c1c1c;
     font-size: 16px;
@@ -22,7 +25,7 @@
     margin: 0;
 }
 
-.featured_shop_card{
+.featured_shop_card {
     left: 0;
     right: 0;
     margin-bottom: 20px;
@@ -40,47 +43,57 @@
     justify-content: center;
     align-items: center;
 }
-.featured_shop_card:hover{
-    box-shadow: 0 0 20px rgba(0,0,0,.2);
+
+.featured_shop_card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
 }
+
 .centered-image {
     display: block;
-    margin: 0 auto; /* Center horizontally */
-    max-width: 100%; /* Ensure image does not exceed container width */
-  }
-  
-.featured_shop_card img{
-    
+    margin: 0 auto;
+    /* Center horizontally */
+    max-width: 100%;
+    /* Ensure image does not exceed container width */
+}
+
+.featured_shop_card img {
+
     width: 100px;
     height: 100px;
     border-radius: 5px;
     margin-bottom: 10px;
 }
-.featured_shop_card h4{
+
+.featured_shop_card h4 {
     font-size: 12px;
     font-weight: 600;
     margin-bottom: 10px;
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide any overflow */
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    overflow: hidden;
+    /* Hide any overflow */
     text-overflow: ellipsis;
 }
 
-.product_card{
+.product_card {
     box-shadow: 0 3px 12px rgb(87 86 86/5%);
 }
-.product_card:hover{
+
+.product_card:hover {
     /* transform effect */
     transform: scale(1.05);
     transition: all 0.3s ease 0s;
     box-shadow: 0 3px 12px rgb(87 86 86/10%);
 }
-.old-price{
+
+.old-price {
     text-decoration: line-through;
     color: #999;
     font-size: 14px;
 }
 
-.product__pagination li, .blog__pagination li {
+.product__pagination li,
+.blog__pagination li {
     display: inline-block;
     cursor: pointer;
     width: 30px;
@@ -99,14 +112,27 @@
     -o-transition: all, 0.3s;
     transition: all, 0.3s;
 }
+
 /* for active */
-.product__pagination li.active a, .blog__pagination li.active a {
+.product__pagination li.active a,
+.blog__pagination li.active a {
     background: #7fad39;
     border-color: #7fad39;
     color: #ffffff;
 }
-.product__pagination a:hover, .blog__pagination a:hover {
+
+.product__pagination a:hover,
+.blog__pagination a:hover {
     background: #7fad39;
     border-color: #7fad39;
     color: #ffffff;
+}
+
+.fixed-nav {
+    position: fixed;
+    background: white;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
 }

@@ -14,10 +14,10 @@ const ShopsPage = ({data}) => {
       </div>
       
       
-      <div className="row">
+      <div className="row d-flex justify-content-center align-items-center">
         {
           shops.map((shop, index) => (
-            <div key={index} className="col-lg-2 border shadow col-md-3 col-sm-6  p-3">
+            <div key={index} className="product_card mx-2 mb-3 border col-lg-3 col-md-4 col-5  p-3">
               
                 <div className="text-center">
                   <img className='img-fluid' src={process.env.API_URL + shop?.image} alt="" style={{ width: "100px", height: "100px" }} />
