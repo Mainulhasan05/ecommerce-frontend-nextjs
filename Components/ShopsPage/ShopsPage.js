@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React, { useState } from 'react'
 
 const ShopsPage = ({data}) => {
@@ -17,7 +18,7 @@ const ShopsPage = ({data}) => {
       <div className="row d-flex justify-content-center align-items-center">
         {
           shops.map((shop, index) => (
-            <div key={index} className="product_card mx-2 mb-3 border col-lg-3 col-md-4 col-5  p-3">
+            <Link href={`/shop/${shop?.slug}`} key={index} className="product_card mx-2 mb-3 border col-lg-3 col-md-4 col-5  p-3">
               
                 <div className="text-center">
                   <img className='img-fluid' src={process.env.API_URL + shop?.image} alt="" style={{ width: "100px", height: "100px" }} />
@@ -28,7 +29,7 @@ const ShopsPage = ({data}) => {
                     </h6>
                 </div>
               
-            </div>
+            </Link>
           ))
         }
       </div>
