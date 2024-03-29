@@ -6,6 +6,10 @@ const MyComponent = () => {
       // Load JavaScript files
       const scripts = [
        
+        '/js/main.js',
+        
+       
+
       ];
 
       for (const script of scripts) {
