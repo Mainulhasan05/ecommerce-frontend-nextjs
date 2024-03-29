@@ -1,8 +1,10 @@
 import React from 'react'
 import CategorySidebar from './CategorySidebar'
 import SearchbarComponent from '../Searchpage/SearchbarComponent'
+import { useSelector } from 'react-redux'
 
 const HeroSection = () => {
+    const { homedata } = useSelector(state => state.home)
   return (
     <section className="hero">
         <div className="container">
@@ -23,8 +25,12 @@ const HeroSection = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="hero__item set-bg" data-setbg="/img/hero/banner.jpg">
-                        <div className="hero__text">
+                    {/* <div className="" >
+                        <img width={"100%"} height={400} src={process.env.API_URL+homedata?.banners[0].imageUrl} alt="" />
+                    </div> */}
+                    <div className="hero__item">
+                    <img style={{'position':"relative"}} width={"100%"} height={400} src={process.env.API_URL+homedata?.banners[0].imageUrl} alt="" />
+                        <div style={{position:"absolute", marginLeft:"20px"}} className="hero__text">
                             <span>FRUIT FRESH</span>
                             <h2>Vegetable <br />100% Organic</h2>
                             <p>Free Pickup and Delivery Available</p>

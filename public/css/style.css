@@ -788,10 +788,10 @@ ol {
 }
 
 .hero__item {
-	height: 431px;
+	height: 360px;
 	display: flex;
 	align-items: center;
-	padding-left: 75px;
+	/* padding-left: 75px; */
 }
 
 .hero__text span {
