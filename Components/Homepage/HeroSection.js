@@ -8,10 +8,19 @@ const HeroSection = () => {
   return (
     <section className="hero">
         <div className="container">
+        <div className="">
+                        <marquee behavior="" direction="">
+                            <h2 style={{color:"red"}}>সেলার হতে পেজে ম্যাসেজ করুন, 
+                            <a href="https://www.facebook.com/SuchonaMartOfficial/">SuchonaMart</a>
+                            </h2>
+                        </marquee>
+                    </div>
             <div className="row">
                 <div className="col-lg-3">
                     <CategorySidebar/>
                 </div>
+                
+
                 <div className="col-lg-9">
                     <div className="hero__search">
                         <SearchbarComponent/>
