@@ -55,6 +55,7 @@ const Navbar = () => {
             <ul>
                 <li class="active"><Link href="/all-products" role="menuitem">All Products</Link></li>
                 <li><Link href="/shops" role="menuitem">Shops</Link></li>
+                <li><Link href="/all-categories" role="menuitem">Categories</Link></li>
                 {
                     homedata?.categories?.map((category,index)=>(
                         <li className='parent_categories' >
@@ -153,7 +154,8 @@ const Navbar = () => {
                         <ul>
                             <li className="active"><Link href="/">Home</Link></li>
                             <li><Link href="/all-products">All Products</Link></li>
-                            <li><Link href="/shops">Shop</Link></li>
+                            <li><Link href="/shops">Shops</Link></li>
+                            <li><Link href="/all-categories">All Categories</Link></li>
                             {/* <li><a href="#">Pages</a>
                                 <ul className="header__menu__dropdown">
                                     <li><a href="./shop-details.html">Shop Details</a></li>

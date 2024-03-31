@@ -136,3 +136,40 @@
     left: 0;
     right: 0;
 }
+
+/* Custom CSS */
+.category-wrapper {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.category-wrapper:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.parent-category a {
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.child-categories {
+    list-style-type: none;
+    padding: 0;
+}
+
+.child-categories li {
+    margin-left: 20px;
+}
+
+.child-categories li a {
+    color: #666;
+    text-decoration: none;
+}
+
+.child-categories li a:hover {
+    color: #333;
+}
