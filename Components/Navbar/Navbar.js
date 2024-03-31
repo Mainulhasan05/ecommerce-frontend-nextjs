@@ -46,7 +46,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="header__top__right__auth">
-                <a href="https://seller.suchonamart.com/"><i className="fa fa-user"></i> সেলার হতে চান ? </a>
+                <a href="https://seller.suchonamart.com/" target='_blank'><i className="fa fa-user"></i> সেলার রেজিস্ট্রেশন </a>
             </div>
         </div>
         
@@ -134,7 +134,7 @@ const Navbar = () => {
                                 </ul>
                             </div>
                             <div className="header__top__right__auth">
-                                <a href="#"><i className="fa fa-user"></i> Login</a>
+                                <a href="https://seller.suchonamart.com/" target='_blank'><i className="fa fa-user"></i> সেলার রেজিস্ট্রেশন  </a>
                             </div>
                         </div>
                     </div>
