@@ -47,6 +47,8 @@ const product = ({data}) => {
         <meta name="description" content="Product is so much good" />
         <meta name="keywords" content={`best product+ ${data?.name}`} />
         <meta name="author" content={data?.shop?.name} />
+        {/* add canonical */}
+        <link rel="canonical" href={`https://suchonamart.com/product/${data?.slug}`} />
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content={`${data?.name} - Suchonamart`} />

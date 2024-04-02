@@ -42,6 +42,7 @@ const index = ({data}) => {
                 <meta name="description" content="Welcome to SuchonaMart - your one-stop destination for online shopping in Chapai Nawabganj. Discover a wide range of products and enjoy convenient delivery options." />
                 <meta name="keywords" content="SuchonaMart, online shopping, Chapai Nawabganj, best online shopping platform, shop online, buy online" />
                 <meta name="robots" content="index, follow" />
+                <link rel="canonical" href="https://suchonamart.com/" />
 
                 {/* Open Graph meta tags */}
                 <meta property="og:title" content="SuchonaMart - Best Online Shopping Platform in Chapai Nawabganj" />
