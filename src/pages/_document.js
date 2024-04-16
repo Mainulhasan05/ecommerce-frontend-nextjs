@@ -5,6 +5,8 @@ export default function Document() {
     <Html lang="en">
               <Head>
           <meta charSet="UTF-8" />
+          {/* set favicon */}
+          <link rel="icon" href="favicon.ico"  />
           
           
           <meta httpEquiv="X-UA-Compatible" content="ie=edge" />

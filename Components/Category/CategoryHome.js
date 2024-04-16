@@ -78,7 +78,7 @@ const CategoryHome = ({ data }) => {
                             </div>
                             <div className="row">
                                 {
-                                    products.map((product, index) => (
+                                    products?.map((product, index) => (
                                         <ProductCard key={index} product={product} />
                                     ))
                                 }

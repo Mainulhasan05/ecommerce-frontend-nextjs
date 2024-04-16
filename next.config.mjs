@@ -7,6 +7,9 @@ const nextConfig = {
     // API_URL: "http://localhost:5000",
     SITE_URL: "https://suchonamart.com",
 
+    TWAK_PROPERTY_ID:"661e21d0a0c6737bd12c6527",
+    TWAK_WIDGET_ID:"1hrir85su"
+
   }
 };
 
